@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200&family=Roboto+Condensed:wght@300&display=swap");
+html {
+  font-size: 62.5%;
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  background-image: url("/public/image/all-image1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100vh;
+  width: 100vw;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+#page_wrapper {
+  width: 100vw;
+}
+
+.container_wrapper {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100vw;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.search_wrapper {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  width: 100vw;
+  height: 9rem;
+  padding: 5rem 0;
+}
+
+.search_wrapper .search_bar_wrapper {
+  position: relative;
+  width: 35rem;
+}
+
+.search_wrapper .search_bar_wrapper .search_bar input {
+  width: 34rem;
+  height: 4rem;
+  border: none;
+  border-top: .3rem;
+  padding-left: 1rem;
+  font-size: 1.6rem;
+  color: black;
+}
+
+.search_wrapper .search_bar_wrapper .search_bar input:focus {
+  outline: none;
+}
+
+.search_wrapper .search_bar_wrapper .search_bar .client_location_btn {
+  position: absolute;
+  right: .6rem;
+  background-color: transparent;
+  font-size: 2rem;
+  border: none;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+}
+
+.search_wrapper .search_bar_wrapper .search_bar .client_location_btn:hover {
+  background-color: rgba(152, 152, 152, 0.472);
+}
+
+.search_wrapper .search_bar_wrapper .search_bar .suggestion_section {
+  width: 35.2rem;
+  max-height: 11rem !important;
+  overflow-y: scroll;
+  background-color: #fff;
+  border-top: 1px solid #5d6c62;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.search_wrapper .search_bar_wrapper .search_bar .suggestion_section::-webkit-scrollbar {
+  display: none;
+}
+
+.search_wrapper .search_bar_wrapper .search_bar .suggestion_section .suggestions {
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 1rem;
+}
+
+.search_wrapper .search_bar_wrapper .search_bar .suggestion_section .suggestions:hover {
+  background-color: #d5d5d5;
+}
+
+.search_wrapper .search_btn {
+  margin-left: 2rem;
+  height: 4.2rem;
+  width: 10rem;
+  border-radius: .3rem;
+  border: none;
+  background-color: #5d6c62;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.search_wrapper .search_btn .fa-magnifying-glass-location {
+  display: none;
+  font-size: 2rem;
+}
+
+.main_wrapper {
+  margin-top: 10rem;
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.crnt_city {
+  gap: 2rem;
+}
+
+.crnt_city .fa-location-dot {
+  color: red;
+  font-size: 3rem;
+  -webkit-animation: updown 3.5s infinite;
+          animation: updown 3.5s infinite;
+}
+
+.crnt_city h1 {
+  font-size: 3rem;
+  padding-right: 2rem;
+}
+
+.crnt_city_temp {
+  max-height: 10rem;
+}
+
+.crnt_city_temp p {
+  font-size: 10rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  word-spacing: 0%;
+  padding-left: 4rem;
+}
+
+.crnt_city_weather p {
+  text-align: center;
+  font-size: 2rem;
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+.no_data {
+  font-size: 2rem;
+}
+
+.forecast_data {
+  position: relative;
+  margin-top: 5rem;
+  padding: 2rem;
+  width: 80vw;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.forecast_data::-webkit-scrollbar {
+  display: none;
+}
+
+.forecast_data .hourly_data {
+  text-align: center;
+  margin: 1rem .8rem;
+  background-color: rgba(255, 255, 255, 0.482);
+  width: 7rem;
+  height: 6rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  gap: 2rem;
+  border-radius: .4rem;
+}
+
+.forecast_data .hourly_data .fc_d {
+  width: 7rem;
+  color: black;
+  font-size: 1.4rem;
+}
+
+.forecast_data .forecast_footer {
+  position: absolute;
+  right: 1rem;
+  bottom: 0rem;
+}
+
+@media (max-width: 650px) {
+  body {
+    background-image: url("/public/image/all_m.jpg");
+  }
+  .search_wrapper .search_bar_wrapper {
+    width: 30rem;
+  }
+  .search_wrapper .search_bar_wrapper .search_bar input {
+    width: 29rem;
+  }
+  .search_wrapper .search_bar_wrapper .search_bar .suggestion_section {
+    width: 30.2rem;
+  }
+  .search_wrapper .search_btn {
+    width: 9rem;
+  }
+  .crnt_city h1 {
+    font-size: 2.5rem;
+    padding-right: 2rem;
+  }
+  .crnt_city_temp p {
+    font-size: 8rem;
+  }
+  .crnt_city_weather p {
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .search_wrapper .search_bar_wrapper {
+    width: 25rem;
+  }
+  .search_wrapper .search_bar_wrapper .search_bar input {
+    width: 24rem;
+  }
+  .search_wrapper .search_bar_wrapper .search_bar .suggestion_section {
+    width: 25.2rem;
+  }
+  .search_wrapper .search_btn {
+    margin-right: 0;
+    width: 7rem;
+  }
+  .search_wrapper .search_btn .search_txt {
+    display: none;
+  }
+  .search_wrapper .search_btn .fa-magnifying-glass-location {
+    display: block;
+  }
+}
+
+@-webkit-keyframes updown {
+  0% {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+  50% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+}
+
+@keyframes updown {
+  0% {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+  50% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+}
+/*# sourceMappingURL=main.css.map */
